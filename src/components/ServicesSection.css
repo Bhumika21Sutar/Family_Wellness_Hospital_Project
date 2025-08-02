@@ -69,7 +69,7 @@
   color: #222;
 }
 .service-card p {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: #555;
   line-height: 1.4;
 }
@@ -156,7 +156,7 @@
   }
 
   .service-image img {
-    height: 200px;
+    height: 280px;
   }
 
   .service-content {
@@ -172,6 +172,6 @@
   }
 
   .service-card p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }

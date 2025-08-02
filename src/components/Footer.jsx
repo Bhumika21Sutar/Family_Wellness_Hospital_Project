@@ -83,9 +83,9 @@ const Footer = () => {
               <li>
                 <a href="#contact">Contact</a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#careers">Careers</a>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -117,8 +117,8 @@ const Footer = () => {
             <h4>Contact Info</h4>
             <div className="footer-contact">
               <p>
-                <i className="fas fa-map-marker-alt"></i> Jutha Aam More,
-                Giridih Road Bharkatta, Saranda, Jharkhand-825324
+                <i className="fas fa-map-marker-alt"></i>Jutha Aam More, Giridih
+                Road Bharkatta, Saranda, Jharkhand
               </p>
               <p>
                 <i className="fas fa-phone"></i> +91 9892772233
