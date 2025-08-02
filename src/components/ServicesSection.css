@@ -152,7 +152,7 @@
 
 @media (max-width: 480px) {
   .services-container {
-    padding: 0 0.25rem;
+    padding: 52px 0.25rem;
   }
 
   .service-image img {
