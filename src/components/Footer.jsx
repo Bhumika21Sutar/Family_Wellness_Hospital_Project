@@ -5,6 +5,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
+import "./Footer.css";
 
 const Footer = () => {
   return (
@@ -137,9 +138,9 @@ const Footer = () => {
         <div className="footer-bottom">
           <p>&copy; 2025 Family Wellness Hospital. All rights reserved.</p>
           <div className="footer-bottom-links">
-            <a href="#privacy">Privacy Policy</a>
+            {/* <a href="#privacy">Privacy Policy</a>
             <a href="#terms">Terms of Service</a>
-            <a href="#disclaimer">Medical Disclaimer</a>
+            <a href="#disclaimer">Medical Disclaimer</a> */}
           </div>
         </div>
       </div>

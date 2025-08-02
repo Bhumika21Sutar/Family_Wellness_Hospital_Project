@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import "./HeroSection.css";
 
 const buttonVariants = {
   hidden: { opacity: 0, y: 30 },

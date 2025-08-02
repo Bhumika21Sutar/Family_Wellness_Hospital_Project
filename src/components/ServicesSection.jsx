@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import "./ServicesSection.css";
 
 const ServicesSection = () => {
   const services = [
@@ -43,35 +44,58 @@ const ServicesSection = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [cardsPerSlide, setCardsPerSlide] = useState(3);
+
+  // ✅ Update cards per slide on screen resize
+  useEffect(() => {
+    const updateCardsPerSlide = () => {
+      if (window.innerWidth <= 600) {
+        setCardsPerSlide(1); // mobile
+      } else if (window.innerWidth <= 900) {
+        setCardsPerSlide(2); // tablet
+      } else {
+        setCardsPerSlide(3); // desktop
+      }
+    };
+
+    updateCardsPerSlide();
+    window.addEventListener("resize", updateCardsPerSlide);
+
+    return () => window.removeEventListener("resize", updateCardsPerSlide);
+  }, []);
 
   // Auto-slide every 10 sec
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 10000); // 10 seconds
+    }, 10000);
     return () => clearInterval(interval);
-  }, [currentIndex]);
+  }, [currentIndex, cardsPerSlide]);
 
   const nextSlide = () => {
-    if (currentIndex + 3 < services.length) {
-      setCurrentIndex(currentIndex + 3);
+    if (currentIndex + cardsPerSlide < services.length) {
+      setCurrentIndex(currentIndex + cardsPerSlide);
     } else {
       setCurrentIndex(0);
     }
   };
 
   const prevSlide = () => {
-    if (currentIndex - 3 >= 0) {
-      setCurrentIndex(currentIndex - 3);
+    if (currentIndex - cardsPerSlide >= 0) {
+      setCurrentIndex(currentIndex - cardsPerSlide);
     } else {
-      setCurrentIndex(services.length - (services.length % 3 || 3));
+      setCurrentIndex(
+        services.length - (services.length % cardsPerSlide || cardsPerSlide)
+      );
     }
   };
 
   return (
-    <section className="services-section" id="services">
+    <section className="services-section">
       <div className="services-container">
-        <h2 className="section-title">Our Medical Services</h2>
+        <h2 className="section-title" id="services">
+          Our Medical Services
+        </h2>
         <p className="section-description">
           We offer a comprehensive range of medical services delivered by
           experienced healthcare professionals using state-of-the-art technology
@@ -96,7 +120,7 @@ const ServicesSection = () => {
                 transition={{ duration: 0.5 }}
               >
                 {services
-                  .slice(currentIndex, currentIndex + 3)
+                  .slice(currentIndex, currentIndex + cardsPerSlide)
                   .map((service, index) => (
                     <div key={index} className="service-card">
                       <div className="service-image">

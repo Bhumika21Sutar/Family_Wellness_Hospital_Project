@@ -1,0 +1,173 @@
+.contact {
+  padding: 3rem 1rem;
+  background: var(--light-gray);
+  border-radius: 14px;
+  margin-top: 3rem;
+}
+
+.contact form {
+  max-width: 1140px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 2rem 2.5rem;
+  border-radius: 14px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  color: var(--text-dark);
+}
+
+form h2 {
+  font-size: 2rem;
+  color: var(--text-dark);
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+form h2 span {
+  color: var(--primary-red);
+}
+
+.input-row {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.input-box {
+  flex: 1;
+  min-width: 230px;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-box .field {
+  width: 100%;
+  height: 50px;
+  background: #f8f8f8;
+  border: 2px solid var(--border-gray);
+  border-radius: 6px;
+  padding: 0 15px;
+  font-size: 16px;
+  color: var(--text-dark);
+  outline: none;
+}
+
+.input-box label {
+  color: var(--text-dark);
+  font-size: 14px;
+  font-weight: 500;
+  gap: 0.5rem;
+}
+
+.input-box .field.mess {
+  height: 200px;
+  resize: vertical;
+  padding: 15px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto 0 auto; /* auto left/right for centering */
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  background: var(--primary-red);
+  color: var(--white);
+}
+
+form button:hover {
+  background-color: #b50000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact {
+    padding: 2rem 0.5rem;
+    margin-top: 2rem;
+  }
+
+  .contact form {
+    padding: 1.5rem;
+    margin: 0 0.5rem;
+  }
+
+  form h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .input-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .input-box {
+    min-width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .input-box .field {
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .input-box .field.mess {
+    height: 150px;
+  }
+
+  form button {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 1.5rem 0.25rem;
+  }
+
+  .contact form {
+    padding: 1rem;
+    margin: 0 0.25rem;
+  }
+
+  form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .input-box .field {
+    height: 40px;
+    font-size: 13px;
+    padding: 0 12px;
+  }
+
+  .input-box .field.mess {
+    height: 120px;
+    padding: 12px;
+  }
+
+  .input-box label {
+    font-size: 13px;
+  }
+
+  form button {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+  }
+}

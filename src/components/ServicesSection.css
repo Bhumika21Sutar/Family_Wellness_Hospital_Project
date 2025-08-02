@@ -1,0 +1,177 @@
+.services-container {
+  max-width: 1200px; /* ⬅️ limit container width */
+  margin: 0 auto; /* center it */
+  padding: 0 1rem;
+}
+
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel {
+  overflow: hidden;
+  flex: 1;
+}
+
+.carousel-track {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+.service-card {
+  flex: 1;
+  max-width: 360px; /* keeps card size neat */
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  padding-bottom: 1rem;
+}
+
+.service-image img {
+  width: 100%;
+  max-width: 360px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-content {
+  padding: 0.8rem;
+  text-align: center;
+  max-width: 280px;
+}
+
+.service-category {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #777;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.service-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: #222;
+}
+.service-card p {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.4;
+}
+/* Navigation buttons - stick to container edges */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s;
+  z-index: 30;
+}
+
+.carousel-btn:hover {
+  background: #f0f0f0;
+}
+
+.carousel-btn.left {
+  left: -5rem; /* ⬅️ push further out to extreme left */
+}
+
+.carousel-btn.right {
+  right: -5rem; /* ⬅️ push further out to extreme right */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .carousel-btn.left {
+    left: -3rem;
+  }
+
+  .carousel-btn.right {
+    right: -3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    padding: 0 0.5rem;
+  }
+
+  .carousel-track {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .service-image img {
+    max-width: 100%;
+    height: 250px;
+  }
+
+  .service-content {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+  }
+
+  .carousel-btn {
+    display: none; /* Hide navigation buttons on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .services-container {
+    padding: 0 0.25rem;
+  }
+
+  .service-image img {
+    height: 200px;
+  }
+
+  .service-content {
+    padding: 0.8rem;
+  }
+
+  .service-category {
+    font-size: 0.6rem;
+  }
+
+  .service-card h3 {
+    font-size: 1rem;
+  }
+
+  .service-card p {
+    font-size: 0.8rem;
+  }
+}
