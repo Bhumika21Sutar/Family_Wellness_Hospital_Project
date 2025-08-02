@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className="navbar-container">
         <div className="navbar-logo">
           <img
-            src="/public/assets/LogoHealth1.png"
+            src="/assets/LogoHealth1.png"
             alt="FWH Logo"
             className="logo-square"
           />
