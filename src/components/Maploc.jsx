@@ -1,5 +1,5 @@
 import React from "react";
-import "./MapLoc.css";
+import "./Maploc.css";
 
 const Maploc = () => {
   return (
