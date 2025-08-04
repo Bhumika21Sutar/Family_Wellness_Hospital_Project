@@ -1,3 +1,56 @@
+// import React, { useState } from "react";
+// import "./Navbar.css";
+
+// const Navbar = () => {
+//   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+//   const toggleMenu = () => {
+//     setIsMenuOpen(!isMenuOpen);
+//   };
+
+//   return (
+//     <nav className="navbar">
+//       <div className="navbar-container">
+//         <div className="navbar-logo">
+//           <img
+//             src="/assets/LogoHealth1.png"
+//             alt="FWH Logo"
+//             className="logo-square"
+//           />
+//         </div>
+
+//         <ul className={`navbar-nav ${isMenuOpen ? "active" : ""}`}>
+//           <li>
+//             <a href="#home">Home</a>
+//           </li>
+//           <li>
+//             <a href="#about">About</a>
+//           </li>
+//           <li>
+//             <a href="#services">Services</a>
+//           </li>
+//           <li>
+//             <a href="#team">Team</a>
+//           </li>
+//           <li>
+//             <a href="#contact">Contact</a>
+//           </li>
+//         </ul>
+
+//         <button className="mobile-menu-toggle" onClick={toggleMenu}>
+//           {isMenuOpen ? (
+//             <i class="fa-solid fa-xmark"></i>
+//           ) : (
+//             <i className="fas fa-bars"></i>
+//           )}
+//         </button>
+//       </div>
+//     </nav>
+//   );
+// };
+
+// export default Navbar;
+
 import React, { useState } from "react";
 import "./Navbar.css";
 
@@ -6,6 +59,10 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   return (
@@ -21,25 +78,35 @@ const Navbar = () => {
 
         <ul className={`navbar-nav ${isMenuOpen ? "active" : ""}`}>
           <li>
-            <a href="#home">Home</a>
+            <a href="#home" onClick={closeMenu}>
+              Home
+            </a>
           </li>
           <li>
-            <a href="#about">About</a>
+            <a href="#about" onClick={closeMenu}>
+              About
+            </a>
           </li>
           <li>
-            <a href="#services">Services</a>
+            <a href="#services" onClick={closeMenu}>
+              Services
+            </a>
           </li>
           <li>
-            <a href="#team">Team</a>
+            <a href="#team" onClick={closeMenu}>
+              Team
+            </a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#contact" onClick={closeMenu}>
+              Contact
+            </a>
           </li>
         </ul>
 
         <button className="mobile-menu-toggle" onClick={toggleMenu}>
           {isMenuOpen ? (
-            <i class="fa-solid fa-xmark"></i>
+            <i className="fa-solid fa-xmark"></i>
           ) : (
             <i className="fas fa-bars"></i>
           )}
