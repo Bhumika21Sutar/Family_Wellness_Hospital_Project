@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./TeamSection.css";
+import JoinTeam from "./JoinTeam";
 
 const TeamSection = () => {
   const founders = [
@@ -36,12 +37,15 @@ const TeamSection = () => {
 
   const administration = [
     {
-      name: "Mr. Gaurav Pradeep Naik",
+      name: "Mr.Pradeep B. Naik",
       title: "COMMERCIAL ADMINISTRATOR",
       description:
         "Expert in healthcare business operations, financial management, and ensuring efficient hospital administration.",
       avatar: "fas fa-user-tie",
     },
+  ];
+
+  const medicalTeam = [
     {
       name: "Mr. Gulab Ramshiromani Yadav",
       title: "DOCTOR'S ADMINISTRATOR",
@@ -49,9 +53,6 @@ const TeamSection = () => {
         "Skilled in medical staff coordination, scheduling, and maintaining high standards of medical care delivery.",
       avatar: "fas fa-user-tie",
     },
-  ];
-
-  const medicalTeam = [
     {
       name: "Dr. Abhishek Kumar Yadav",
       title: "General Medicine",
@@ -62,6 +63,14 @@ const TeamSection = () => {
     },
     {
       name: "Dr. Manish Kamdeo Ranawat-Pandey",
+      title: "Internal Medicine",
+      description:
+        "Internal medicine specialist with expertise in diagnosing and treating adult diseases, with focus on holistic patient care.",
+      avatar: "fas fa-user-md",
+      isDoctor: true,
+    },
+    {
+      name: "Dr. Anuradha Shipra",
       title: "Internal Medicine",
       description:
         "Internal medicine specialist with expertise in diagnosing and treating adult diseases, with focus on holistic patient care.",
@@ -173,7 +182,7 @@ const TeamSection = () => {
         </div>
 
         {/* Medical Team Section */}
-        <div className="team-category">
+        {/* <div className="team-category">
           <motion.h3
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -196,6 +205,27 @@ const TeamSection = () => {
               />
             ))}
           </motion.div>
+        </div> */}
+
+        <div className="team-category founders-section">
+          <motion.h3
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            Medical Team
+          </motion.h3>
+          <motion.div
+            className="founders-grid"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            {medicalTeam.map((member, index) => (
+              <TeamCard key={index} member={member} isFounder={true} />
+            ))}
+          </motion.div>
         </div>
 
         {/* Join Section */}
@@ -205,6 +235,17 @@ const TeamSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
+          {/* <h3>Join Our Team</h3>
+          <p>
+            We are always looking for passionate healthcare professionals to
+            join our mission of providing
+            <br />
+            exceptional care to our community.
+          </p>
+          <a href="#" className="btn btn-primary">
+            <i className="fas fa-briefcase"></i>
+            View Career Opportunities
+          </a> */}
           <h3>Join Our Team</h3>
           <p>
             We are always looking for passionate healthcare professionals to
@@ -212,10 +253,7 @@ const TeamSection = () => {
             <br />
             exceptional care to our community.
           </p>
-          <a href="#contact" className="btn btn-primary">
-            <i className="fas fa-briefcase"></i>
-            View Career Opportunities
-          </a>
+          <JoinTeam />
         </motion.div>
       </div>
     </motion.section>

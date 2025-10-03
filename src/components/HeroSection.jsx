@@ -27,18 +27,18 @@ const HeroSection = () => {
     <section id="home" className="hero-section">
       <div className="hero-container">
         <h1 className="hero-title">
-          <span className="welcome-text">Welcome to </span>
-          <span className="hospital-name">
-            Family Wellness
+          <span className="welcome-text">
+            Welcome
             <br />
-            Hospital
+            To <br />
           </span>
+          <span className="hospital-name">Family Wellness Hospital</span>
         </h1>
 
         <p className="hero-description">
-          A newly constructed, state-of-the-art healthcare facility in Saranda,
-          Jharkhand. We are ready to serve our community with modern medical
-          care and compassionate service.
+          A newly constructed, state-of-the-art healthcare facility in
+          Bharkatta, Saranda. We are ready to serve our community with modern
+          medical care and allopathy system of medicine service.
         </p>
 
         <div className="hero-buttons">

@@ -1,6 +1,6 @@
 .services-container {
-  max-width: 1200px; /* ⬅️ limit container width */
-  margin: 0 auto; /* center it */
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 0 1rem;
 }
 
@@ -23,7 +23,7 @@
 }
 .service-card {
   flex: 1;
-  max-width: 360px; /* keeps card size neat */
+  max-width: 360px;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
@@ -93,11 +93,62 @@
 }
 
 .carousel-btn.left {
-  left: -5rem; /* ⬅️ push further out to extreme left */
+  left: -5rem;
 }
 
 .carousel-btn.right {
-  right: -5rem; /* ⬅️ push further out to extreme right */
+  right: -5rem;
+}
+
+.join-team {
+  text-align: center;
+  padding: 3rem 0;
+  background: var(--soft-pink);
+  border-radius: 14px;
+  margin-top: 3rem;
+}
+
+.join-team h3 {
+  color: var(--text-dark);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.upcoming-services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.service-box {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.service-box img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.service-box span {
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
 }
 
 /* Responsive Design */
@@ -146,7 +197,7 @@
   }
 
   .carousel-btn {
-    display: none; /* Hide navigation buttons on mobile */
+    display: none;
   }
 }
 
