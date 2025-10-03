@@ -69,11 +69,13 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          <img
-            src="/assets/LogoHealth1.png"
-            alt="FWH Logo"
-            className="logo-square"
-          />
+          <a href="#home" onClick={closeMenu}>
+            <img
+              src="/assets/LogoHealth1.png"
+              alt="FWH Logo"
+              className="logo-square"
+            />
+          </a>
         </div>
 
         <ul className={`navbar-nav ${isMenuOpen ? "active" : ""}`}>
