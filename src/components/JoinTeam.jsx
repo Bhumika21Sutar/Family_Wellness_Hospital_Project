@@ -201,8 +201,8 @@ const JoinTeam = () => {
                   <input type="text" name="name" required />
                 </label>
                 <label>
-                  City Name
-                  <input type="text" name="city" required />
+                  Village Name
+                  <input type="text" name="village" required />
                 </label>
               </div>
 

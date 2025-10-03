@@ -222,12 +222,12 @@ const Contact = () => {
           </div>
 
           <div className="input-box">
-            <label>City Name</label>
+            <label>Village Name</label>
             <input
               type="text"
               className="field"
-              placeholder="Enter your City Name"
-              name="city"
+              placeholder="Enter your Village Name"
+              name="Village"
               required
             />
           </div>

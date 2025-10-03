@@ -167,20 +167,28 @@
     padding: 0 0.5rem;
   }
 
-  .carousel-track {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .service-card {
-    max-width: 100%;
+  .carousel {
+    overflow: hidden; /* prevent extra width */
+    position: relative;
     width: 100%;
   }
 
-  .service-image img {
+  .carousel-track {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0; /* remove gap so it doesn’t add width */
+  }
+
+  .service-card {
+    flex: 0 0 100%; /* exactly 1 card per slide */
     max-width: 100%;
+  }
+
+  .service-image img {
+    width: 100%;
     height: 250px;
+    object-fit: cover;
   }
 
   .service-content {
@@ -196,8 +204,22 @@
     font-size: 0.9rem;
   }
 
+  /* Buttons inside the carousel edges */
   .carousel-btn {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+  }
+
+  .carousel-btn.left {
+    left: 10px; /* inside screen */
+  }
+
+  .carousel-btn.right {
+    right: 10px; /* inside screen */
   }
 }
 
