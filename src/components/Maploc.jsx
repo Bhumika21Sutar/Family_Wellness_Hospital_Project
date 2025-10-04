@@ -3,7 +3,7 @@ import "./Maploc.css";
 
 const Maploc = () => {
   return (
-    <section className="contact-location">
+    <section className="contact-location" id="loc">
       <div className="location-info">
         <h2>Get in Touch</h2>
         <p>

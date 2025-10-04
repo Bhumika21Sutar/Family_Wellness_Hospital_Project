@@ -37,8 +37,39 @@ const AboutSection = () => {
           variants={fadeInUp}
           viewport={{ once: true }}
         >
-          Founded with a mission to provide exceptional healthcare services, we
-          are committed to the health and wellness of our community.
+          That’s wonderful news! We are thrilled to announce the completion of
+          our new 50-bedded hospital facility, ready to serve our community.
+          Family Wellness Hospital is equipped to provide comprehensive care
+          across General Medicine, Surgery, and Maternity services.
+          <br />
+          At Family Wellness Hospital, we believe healthcare goes beyond just
+          treating illness—it’s about nurturing long-term well-being for every
+          member of your family. Our vision is simple: a healthy community
+          begins with healthy families.
+          <br />
+          We are committed to serving families of all ages, providing
+          accessible, high-quality medical expertise right here in your village.
+          From routine check-ups to specialized care, our team is here to
+          support your health journey at every stage of life.
+          <br />
+          {/* <b>
+            Family Wellness Hospital: Where Every Family Member Thrives.
+          </b>{" "}
+          <br />
+          Partner in Health, For Every Stage of Life.
+          <br />
+          Healing, Wellness, and Community: All Under One Roof
+          <br />
+          Comprehensive Care, Comforting Touch
+          <br />
+          Focused on Families. Focused on You.
+          <br /> */}
+          <b>
+            {" "}
+            As your neighbors, we are dedicated to the health and vitality of
+            our community. Together, let’s build a healthier tomorrow—one family
+            at a time.
+          </b>
         </motion.p>
 
         <div className="about-content">

@@ -36,9 +36,10 @@ const HeroSection = () => {
         </h1>
 
         <p className="hero-description">
-          A newly constructed, state-of-the-art healthcare facility in
-          Bharkatta, Saranda. We are ready to serve our community with modern
-          medical care and allopathy system of medicine service.
+          <b>State-of-the-Art Hospital & 24/7 ER in Jutha Aam, Bharkatta.</b>
+          <br />
+          New Jutha Aam & Bharkatta Community Medical Centre now offers easy
+          online appointment booking. Find a Doctor, Call Emergency: 9892772233
         </p>
 
         <div className="hero-buttons">

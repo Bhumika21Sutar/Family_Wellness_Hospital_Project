@@ -1,45 +1,114 @@
-// import React from "react";
+// import React, { useState } from "react";
 // import Swal from "sweetalert2";
+// import { QRCodeCanvas } from "qrcode.react";
+// import ReactDOMServer from "react-dom/server";
 // import "./Contact.css";
 
 // const Contact = () => {
+//   const [fileNames, setFileNames] = useState([]);
+//   const [files, setFiles] = useState([]); // store selected files
+
+//   // Convert file to Base64
+//   const fileToBase64 = (file) =>
+//     new Promise((resolve, reject) => {
+//       const reader = new FileReader();
+//       reader.readAsDataURL(file);
+//       reader.onload = () => resolve(reader.result);
+//       reader.onerror = (error) => reject(error);
+//     });
+
+//   // Form submit
 //   const onSubmit = async (event) => {
 //     event.preventDefault();
+
 //     const formData = new FormData(event.target);
 
+//     // REQUIRED fields for Web3Forms
 //     formData.append("access_key", "814b3682-9eba-426a-af8b-3839fbb4aeb4");
+//     formData.append("subject", "New Contact Form Submission");
+//     formData.append("from_name", formData.get("name")); // sender name
 
-//     const object = Object.fromEntries(formData);
-//     const json = JSON.stringify(object);
+//     // Attach files properly
+//     files.forEach((file) => {
+//       formData.append("attachments[]", file, file.name);
+//     });
 
-//     const res = await fetch("https://api.web3forms.com/submit", {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//         Accept: "application/json",
+//     // QR Code Step
+//     const qrHtml = ReactDOMServer.renderToString(
+//       <div style={{ textAlign: "center" }}>
+//         <div style={{ marginBottom: 10 }}>
+//           <QRCodeCanvas value="https://dummy-payment-url.com" size={200} />
+//         </div>
+//         <span>Scan to pay</span>
+//       </div>
+//     );
+
+//     const qrResult = await Swal.fire({
+//       title: "Payment Required",
+//       html: qrHtml,
+//       confirmButtonText: "I have paid",
+//       cancelButtonText: "Cancel",
+//       showCancelButton: true,
+//       allowOutsideClick: false,
+//     });
+
+//     if (!qrResult.isConfirmed) {
+//       Swal.fire("Cancelled", "You did not complete the payment.", "error");
+//       return;
+//     }
+
+//     await Swal.fire(
+//       "Payment Successful!",
+//       "Thank you for your payment.",
+//       "success"
+//     );
+
+//     Swal.fire({
+//       title: "Sending Message...",
+//       allowOutsideClick: false,
+//       didOpen: () => {
+//         Swal.showLoading();
 //       },
-//       body: json,
-//     }).then((res) => res.json());
+//     });
 
-//     if (res.success) {
-//       Swal.fire({
-//         title: "Success!",
-//         text: "Message sent successfully!",
-//         icon: "success",
-//       });
-//     } else {
-//       Swal.fire({
-//         title: "Error!",
-//         text: "There was an error sending your message. Please try again later.",
-//         icon: "error",
-//       });
+//     try {
+//       const res = await fetch("https://api.web3forms.com/submit", {
+//         method: "POST",
+//         body: formData, // DO NOT stringify
+//       }).then((res) => res.json());
+
+//       Swal.close();
+
+//       if (res.success) {
+//         Swal.fire("Success!", "Message sent successfully!", "success");
+//         event.target.reset();
+//         setFileNames([]);
+//         setFiles([]);
+//       } else {
+//         Swal.fire(
+//           "Error!",
+//           res.message || "There was an error sending your message.",
+//           "error"
+//         );
+//       }
+//     } catch (err) {
+//       Swal.close();
+//       Swal.fire("Error!", "Network error. Please try again later.", "error");
 //     }
 //   };
+
+//   // Handle file input
+//   const handleFileChange = (event) => {
+//     const selectedFiles = Array.from(event.target.files);
+//     setFileNames(selectedFiles.map((file) => file.name));
+//     setFiles(selectedFiles);
+//   };
+
 //   return (
 //     <section id="contact" className="contact">
 //       <form onSubmit={onSubmit}>
 //         <h2>
-//           Get In <span>Touch</span>{" "}
+//           Get In <span>Touch</span>
 //         </h2>
 
 //         <div className="input-row">
@@ -55,12 +124,12 @@
 //           </div>
 
 //           <div className="input-box">
-//             <label>City Name</label>
+//             <label>Village Name</label>
 //             <input
 //               type="text"
 //               className="field"
-//               placeholder="Enter your City Name"
-//               name="city"
+//               placeholder="Enter your Village Name"
+//               name="Village"
 //               required
 //             />
 //           </div>
@@ -89,30 +158,6 @@
 //             />
 //           </div>
 //         </div>
-//         {/*
-//         <div className="input-box message-box">
-//           <label>Your Message</label>
-//           <div className="message-wrapper">
-//             <textarea
-//               name="message"
-//               className="field mess"
-//               placeholder="Tell us about your health issues and Doctor prescription."
-//               required
-//             ></textarea>
-
-//             <label htmlFor="documents" className="upload-btn">
-//               Upload Documents
-//             </label>
-//             <input
-//               type="file"
-//               id="documents"
-//               name="documents"
-//               multiple
-//               accept=".jpg,.jpeg,.png,.pdf,.doc,.docx"
-//               hidden
-//             />
-//           </div>
-//         </div> */}
 
 //         <div className="input-box message-box">
 //           <label>Your Message</label>
@@ -124,7 +169,6 @@
 //               required
 //             ></textarea>
 
-//             {/* Upload Button inside message box */}
 //             <button
 //               type="button"
 //               className="upload-btn"
@@ -132,6 +176,7 @@
 //             >
 //               Upload Documents
 //             </button>
+
 //             <input
 //               type="file"
 //               id="documents"
@@ -139,8 +184,20 @@
 //               multiple
 //               accept=".jpg,.jpeg,.png,.pdf,.doc,.docx"
 //               hidden
+//               onChange={handleFileChange}
 //             />
 //           </div>
+
+//           {fileNames.length > 0 && (
+//             <div className="file-names">
+//               <p>Selected Files:</p>
+//               <ul>
+//                 {fileNames.map((name, index) => (
+//                   <li key={index}>{name}</li>
+//                 ))}
+//               </ul>
+//             </div>
+//           )}
 //         </div>
 
 //         <div className="button-container">
@@ -155,51 +212,92 @@
 
 import React, { useState } from "react";
 import Swal from "sweetalert2";
+import { QRCodeCanvas } from "qrcode.react";
+import ReactDOMServer from "react-dom/server";
 import "./Contact.css";
 
 const Contact = () => {
   const [fileNames, setFileNames] = useState([]);
+  const [files, setFiles] = useState([]); // store selected files
 
-  const onSubmit = async (event) => {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-
-    formData.append("access_key", "814b3682-9eba-426a-af8b-3839fbb4aeb4");
-
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
-
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: json,
-    }).then((res) => res.json());
-
-    if (res.success) {
-      Swal.fire({
-        title: "Success!",
-        text: "Message sent successfully!",
-        icon: "success",
-      });
-
-      // Clear the form
-      event.target.reset();
-      setFileNames([]);
-    } else {
-      Swal.fire({
-        title: "Error!",
-        text: "There was an error sending your message. Please try again later.",
-        icon: "error",
-      });
-    }
+  // Handle file input
+  const handleFileChange = (event) => {
+    const selectedFiles = Array.from(event.target.files);
+    setFileNames(selectedFiles.map((file) => file.name));
+    setFiles(selectedFiles);
   };
 
-  const handleFileChange = (event) => {
-    const files = Array.from(event.target.files);
-    setFileNames(files.map((file) => file.name));
+  // Form submit
+  const onSubmit = async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+
+    // ✅ Attach selected files
+    files.forEach((file) => {
+      formData.append("attachments", file, file.name);
+    });
+
+    // QR Code Step (before sending email)
+    const qrHtml = ReactDOMServer.renderToString(
+      <div style={{ textAlign: "center" }}>
+        <div style={{ marginBottom: 10 }}>
+          <QRCodeCanvas value="https://dummy-payment-url.com" size={200} />
+        </div>
+        <span>Scan to pay</span>
+      </div>
+    );
+
+    const qrResult = await Swal.fire({
+      title: "Payment Required",
+      html: qrHtml,
+      confirmButtonText: "I have paid",
+      cancelButtonText: "Cancel",
+      showCancelButton: true,
+      allowOutsideClick: false,
+    });
+
+    if (!qrResult.isConfirmed) {
+      Swal.fire("Cancelled", "You did not complete the payment.", "error");
+      return;
+    }
+
+    Swal.fire("Payment Successful!", "Thank you for your payment.", "success");
+
+    // Show loading while sending email
+    Swal.fire({
+      title: "Sending Message...",
+      allowOutsideClick: false,
+      didOpen: () => {
+        Swal.showLoading();
+      },
+    });
+
+    try {
+      const res = await fetch("http://localhost:5000/send-contact", {
+        method: "POST",
+        body: formData, // ✅ multipart/form-data
+      });
+
+      const result = await res.json();
+      Swal.close();
+
+      if (result.success) {
+        Swal.fire("Success!", "Message sent successfully!", "success");
+        event.target.reset();
+        setFileNames([]);
+        setFiles([]);
+      } else {
+        Swal.fire(
+          "Error!",
+          result.message || "Failed to send message.",
+          "error"
+        );
+      }
+    } catch (err) {
+      Swal.close();
+      Swal.fire("Error!", "Network error. Please try again later.", "error");
+    }
   };
 
   return (
@@ -227,7 +325,7 @@ const Contact = () => {
               type="text"
               className="field"
               placeholder="Enter your Village Name"
-              name="Village"
+              name="village"
               required
             />
           </div>
@@ -278,7 +376,7 @@ const Contact = () => {
             <input
               type="file"
               id="documents"
-              name="documents"
+              name="attachments"
               multiple
               accept=".jpg,.jpeg,.png,.pdf,.doc,.docx"
               hidden
@@ -286,7 +384,6 @@ const Contact = () => {
             />
           </div>
 
-          {/* Display selected file names */}
           {fileNames.length > 0 && (
             <div className="file-names">
               <p>Selected Files:</p>

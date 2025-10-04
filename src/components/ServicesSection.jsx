@@ -321,13 +321,13 @@ const ServicesSection = () => {
   ];
 
   const upcomingServices = [
-    { title: "Laser - Fractional CO2", logo: "/assets/" },
-    { title: "NdYAG", logo: "/assets/" },
-    { title: "Hair Removal Laser", logo: "/assets/" },
-    { title: "Hollywood Spectra Peel", logo: "/assets/" },
-    { title: "MNRF", logo: "/assets/mnrf.png" },
-    { title: "Hydrafacial", logo: "/assets/" },
-    { title: "HIFU", logo: "/assets/" },
+    { title: "Laser - Fractional CO2", logo: "/assets/Up1.jpg" },
+    { title: "NdYAG", logo: "/assets/Up2.jpg" },
+    { title: "Hair Removal Laser", logo: "/assets/Up3.jpg" },
+    { title: "Hollywood Spectra Peel", logo: "/assets/Up4.jpg" },
+    { title: "MNRF", logo: "/assets/Up5.jpg" },
+    { title: "Hydrafacial", logo: "/assets/Up6.jpg" },
+    { title: "HIFU", logo: "/assets/Up7.jpg" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -422,16 +422,19 @@ const ServicesSection = () => {
 
         {/* Upcoming Services Section */}
         <motion.div
+          id="up-services"
           className="join-team"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h3>Upcoming Services</h3>
+          <h3>
+            Upcoming <span className="highlight">Services</span>{" "}
+          </h3>
           <div className="upcoming-services-grid">
             {upcomingServices.map((service, index) => (
               <div key={index} className="service-box">
-                {/* <img src={service.logo} alt={service.title} /> */}
+                <img src={service.logo} alt={service.title} />
                 <span>{service.title}</span>
               </div>
             ))}

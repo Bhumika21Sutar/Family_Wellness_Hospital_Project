@@ -8,6 +8,7 @@ import TeamSection from "./components/TeamSection";
 import Contact from "./components/Contact";
 import MapLoc from "./components/Maploc";
 import Footer from "./components/Footer";
+import AreaOfFocus from "./components/AreaOfFocus";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Navbar />
       <HeroSection />
       <AboutSection />
+      <AreaOfFocus />
       <ServicesSection />
       <TeamSection />
       <Contact />
