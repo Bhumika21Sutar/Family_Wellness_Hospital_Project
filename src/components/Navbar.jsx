@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isDownloadOpen, setIsDownloadOpen] = useState(false);
 
   const toggleMenu = (e) => {
-    e.stopPropagation(); // prevent triggering document click
+    e.stopPropagation();
     setIsMenuOpen((prev) => !prev);
     setIsDownloadOpen(false);
   };
@@ -23,7 +23,6 @@ const Navbar = () => {
     setIsDownloadOpen(false);
   };
 
-  // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (!e.target.closest(".navbar")) {
@@ -70,6 +69,7 @@ const Navbar = () => {
             </li>
           ))}
 
+          {/* Download Dropdown */}
           <li className="download-menu">
             <button className="download-btn" onClick={toggleDownload}>
               Download

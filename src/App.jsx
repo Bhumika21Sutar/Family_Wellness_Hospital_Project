@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 import MapLoc from "./components/Maploc";
 import Footer from "./components/Footer";
 import AreaOfFocus from "./components/AreaOfFocus";
+import FooterFix from "./components/FooterFix";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Contact />
       <MapLoc />
       <Footer />
+      <FooterFix />
     </div>
   );
 }

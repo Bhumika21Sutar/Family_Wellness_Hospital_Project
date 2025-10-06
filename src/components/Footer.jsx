@@ -14,56 +14,18 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-section">
             <div className="footer-logo">
-              <div className="footer-logo-square">
-                {" "}
-                <img
-                  src="/assets/logoHealth.png"
-                  alt="FWH Logo"
-                  className="footer-img"
-                />
-              </div>
+              <img
+                src="/assets/logoHealth.png"
+                alt="FWH Logo"
+                className="footer-img"
+              />
             </div>
-
             <div className="footer-description">
               Providing compassionate, comprehensive healthcare services to our
               community with state-of-the-art facilities and expert medical
               professionals.
             </div>
-
-            {/* Social Media Icons */}
-            <div className="footer-social-icons">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaFacebookF />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaTwitter />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaInstagram />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedinIn />
-              </a>
-            </div>
           </div>
-
-          {/* ... Rest of your sections remain unchanged ... */}
 
           <div className="footer-section">
             <h4>Quick Links</h4>
@@ -83,9 +45,6 @@ const Footer = () => {
               <li>
                 <a href="#contact">Contact</a>
               </li>
-              {/* <li>
-                <a href="#careers">Careers</a>
-              </li> */}
             </ul>
           </div>
 
@@ -117,8 +76,8 @@ const Footer = () => {
             <h4>Contact Info</h4>
             <div className="footer-contact">
               <p>
-                <i className="fas fa-map-marker-alt"></i>Jutha Aam More, Giridih
-                Road Bharkatta, Saranda, Jharkhand
+                <i className="fas fa-map-marker-alt"></i> Jutha Aam More,
+                Giridih Road Bharkatta, Saranda, Jharkhand
               </p>
               <p>
                 <i className="fas fa-phone"></i> +91 9892772233
@@ -132,15 +91,6 @@ const Footer = () => {
                 8AM–8PM
               </p>
             </div>
-          </div>
-        </div>
-
-        <div className="footer-bottom">
-          <p>&copy; 2025 Family Wellness Hospital. All rights reserved.</p>
-          <div className="footer-bottom-links">
-            {/* <a href="#privacy">Privacy Policy</a>
-            <a href="#terms">Terms of Service</a>
-            <a href="#disclaimer">Medical Disclaimer</a> */}
           </div>
         </div>
       </div>

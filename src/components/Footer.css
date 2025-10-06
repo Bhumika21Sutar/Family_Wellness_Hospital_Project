@@ -2,6 +2,7 @@
   background: var(--text-dark);
   color: var(--white);
   padding: 3rem 0 1rem;
+  margin-bottom: 10px;
 }
 
 .footer-container {
@@ -59,7 +60,6 @@
   margin-bottom: 1rem;
 }
 
-/* Social Media Icons */
 .footer-logo-text-group {
   display: flex;
   flex-direction: column;
@@ -154,7 +154,6 @@
   color: var(--white);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .footer {
     padding: 2rem 0 1rem;
