@@ -71,7 +71,7 @@ const Navbar = () => {
         <div className="navbar-logo">
           <a href="#home" onClick={closeMenu}>
             <img
-              src="/assets/LogoHealth1.png"
+              src="/assets/LogoFamily.png"
               alt="FWH Logo"
               className="logo-square"
             />
