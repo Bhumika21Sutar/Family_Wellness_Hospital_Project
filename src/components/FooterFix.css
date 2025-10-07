@@ -73,7 +73,7 @@
   width: 100%;
   background-color: var(--text-dark);
   color: var(--white);
-  padding: 0.8rem 2rem; /* default height */
+  padding: 0.4rem 1rem; /* default height */
   z-index: 1000;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
 }
