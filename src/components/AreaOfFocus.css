@@ -30,15 +30,67 @@
 }
 
 .scroll-wrapper {
-  overflow: hidden;
+  position: relative;
+  overflow: visible; /* allow buttons to sit over the edges */
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .scrolling-container {
   display: flex;
   gap: 2rem;
-  width: calc(2 * (total width of single services set + gaps));
-  animation: scroll-left 80s linear infinite;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 72px; /* reserve space for left/right buttons (button width + margin) */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* hide native scrollbar (optional) */
+.scrolling-container::-webkit-scrollbar {
+  display: none;
+}
+.scrolling-container {
+  scrollbar-width: none;
+} /* firefox */
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--primary-red);
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  z-index: 60; /* ensure above the items */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.14s ease, opacity 0.14s ease;
+}
+
+/* explicit positioning */
+.scroll-btn.left {
+  left: 12px;
+}
+.scroll-btn.right {
+  right: 12px;
+}
+
+/* small hover effect */
+.scroll-btn:hover {
+  transform: translateY(-50%) scale(1.04);
+}
+
+.scroll-btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+  transform: none;
 }
 
 .scroll-item {
@@ -59,15 +111,6 @@
   background-color: var(--primary-red);
   color: var(--white);
   border-color: var(--primary-red);
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
 }
 
 /* Popup overlay */
@@ -186,5 +229,18 @@
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+/* ---------- responsive tweaks ---------- */
+@media (max-width: 600px) {
+  .scroll-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+  .scrolling-container {
+    padding: 8px 56px;
+    gap: 1rem;
   }
 }
