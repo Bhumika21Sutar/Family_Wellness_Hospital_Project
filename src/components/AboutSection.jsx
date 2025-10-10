@@ -48,7 +48,7 @@ const AboutSection = () => {
           begins with healthy families.
           <br />
           We are committed to serving families of all ages, providing
-          accessible, high-quality medical expertise right here in your village.
+          accessible, high-quality medical expertise right here in our village.
           From routine check-ups to specialized care, our team is here to
           support your health journey at every stage of life.
           <br />
@@ -67,8 +67,8 @@ const AboutSection = () => {
           <b>
             {" "}
             As your neighbors, we are dedicated to the health and vitality of
-            our community. Together, let’s build a healthier tomorrow—one family
-            at a time.
+            our community. Together, let’s build a healthier tomorrow—one
+            family at a time.
           </b>
         </motion.p>
 
