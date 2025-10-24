@@ -16,7 +16,7 @@ const Maploc = () => {
           <strong>Email:</strong> familywellnesshospital@gmail.com
         </p>
         <p>
-          <strong>Phone:</strong> +91 9892772233
+          <strong>Phone:</strong> +91 9821772233
         </p>
       </div>
 

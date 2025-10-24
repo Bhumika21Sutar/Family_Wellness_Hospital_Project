@@ -47,33 +47,53 @@ const TeamSection = () => {
 
   const medicalTeam = [
     {
-      name: "Mr. Gulab Ramshiromani Yadav",
-      title: "DOCTOR'S ADMINISTRATOR",
+      name: "Dr. Manish Ranawat",
+      title: "M.B.B.S. (General Physician)",
       description:
-        "Skilled in medical staff coordination, scheduling, and maintaining high standards of medical care delivery.",
+        "Treats common illnesses and provides general health care (सामान्य बीमारियों का इलाज और सामान्य स्वास्थ्य देखभाल)",
       avatar: "fas fa-user-tie",
     },
     {
-      name: "Dr. Abhishek Kumar Yadav",
-      title: "General Medicine",
+      name: "Dr. Vinay Kumar",
+      title: "M.B.B.S. (Patna)-General Physician & Ortho Specialist",
       description:
-        "Experienced physician specializing in comprehensive primary care, preventive medicine, and treatment of acute and chronic conditions.",
+        "Treats common illnesses and bone or joint-related problems (सामान्य बीमारियों का इलाज और हड्डी-जोड़ों से जुड़ी समस्याओं का उपचार)",
+      avatar: "fas fa-user-tie",
+    },
+    {
+      name: "Dr. Suresh Choudhary",
+      title: "M.B.B.S. (Patna)-General Physician",
+      description: "Treats common illnesses and provides general health care",
+      avatar: "fas fa-user-tie",
+    },
+    {
+      name: "Dr. Nikhil Agarwal",
+      title: "B.D.S (Kanpur)",
+      description:
+        "Treats teeth and mouth-related problems (दाँत रोग विशेषज्ञ)",
+      avatar: "fas fa-user-tie",
+    },
+    {
+      name: "Dr. Chanchala",
+      title: "M.B.B.S. (PMCH, Dhanbad)",
+      description:
+        "Specialist in Women, Maternity & Child Care (स्त्री, प्रसूति एवं शिशु रोग विशेषज्ञ)-Ex-RMO (ICU) Ward,Asarfi Hospital,Dhanbad, Ex-RMO (NICU) Ward Asain Hospital)",
       avatar: "fas fa-user-md",
       isDoctor: true,
     },
     {
-      name: "Dr. Manish Kamdeo Ranawat-Pandey",
-      title: "Internal Medicine",
+      name: "Dr. Biplav Shastri",
+      title: "M.B.B.S. (Kanpur)",
       description:
-        "Internal medicine specialist with expertise in diagnosing and treating adult diseases, with focus on holistic patient care.",
+        "Child Specialist / Pediatrician – Treats illnesses in children (शिशु रोग विशेषज्ञ)",
       avatar: "fas fa-user-md",
       isDoctor: true,
     },
     {
       name: "Dr. Anuradha Shipra",
-      title: "Internal Medicine",
+      title: "CCU,NICU(Asian Jalan Hospital)",
       description:
-        "Internal medicine specialist with expertise in diagnosing and treating adult diseases, with focus on holistic patient care.",
+        "Women’s & Maternity Care-स्त्री एवं प्रसूति रोग विशेषज्ञ (महिला एवं गर्भ संबंधी इलाज)",
       avatar: "fas fa-user-md",
       isDoctor: true,
     },

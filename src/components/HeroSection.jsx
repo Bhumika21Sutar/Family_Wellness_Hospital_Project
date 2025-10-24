@@ -36,10 +36,13 @@ const HeroSection = () => {
         </h1>
 
         <p className="hero-description">
-          <b>State-of-the-Art Hospital & 24/7 ER in Jutha Aam, Bharkatta.</b>
+          <b>
+            Providing complete care for your family’s health with trusted
+            doctors and 24/7 Emergency Service in Jutha Aam, Bharkatta.
+          </b>
           <br />
           New Jutha Aam & Bharkatta Community Medical Centre now offers easy
-          online appointment booking. Find a Doctor, Call Emergency: 9892772233
+          online appointment booking. Find a Doctor, Call Emergency: 9821772233
         </p>
 
         <div className="hero-buttons">

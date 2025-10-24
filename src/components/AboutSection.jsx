@@ -38,14 +38,17 @@ const AboutSection = () => {
           viewport={{ once: true }}
         >
           That’s wonderful news! We are thrilled to announce the completion of
-          our new 50-bedded hospital facility, ready to serve our community.
+          our new 50-bedded hospital facility, ready to serve your community.
           Family Wellness Hospital is equipped to provide comprehensive care
           across General Medicine, Surgery, and Maternity services.
           <br />
           At Family Wellness Hospital, we believe healthcare goes beyond just
           treating illness—it’s about nurturing long-term well-being for every
-          member of your family. Our vision is simple: a healthy community
-          begins with healthy families.
+          member of your family.{" "}
+          <b>
+            Our vision - Providing safe and trusted healthcare for all, near
+            your home.
+          </b>
           <br />
           We are committed to serving families of all ages, providing
           accessible, high-quality medical expertise right here in our village.
@@ -66,9 +69,8 @@ const AboutSection = () => {
           <br /> */}
           <b>
             {" "}
-            As your neighbors, we are dedicated to the health and vitality of
-            our community. Together, let’s build a healthier tomorrow—one
-            family at a time.
+            We are dedicated to the health and well-being of your
+            community,working every day for a healthier tomorrow.
           </b>
         </motion.p>
 
@@ -91,7 +93,7 @@ const AboutSection = () => {
             <ul className="mission-list">
               {[
                 "Patient-Centered Care - Putting your health and comfort first",
-                "Advanced Technology - State-of-the-art medical equipment and facilities",
+                "Complete Medical Care – All basic health needs under one roof.",
                 "Expert Team - Highly qualified and experienced healthcare professionals",
               ].map((item, index) => (
                 <motion.li

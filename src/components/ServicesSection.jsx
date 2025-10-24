@@ -221,99 +221,99 @@ import "./ServicesSection.css";
 const ServicesSection = () => {
   const services = [
     {
-      image: "/assets/S1.png",
+      image: "/assets/Blur.png",
       title: "Dermatology",
       description:
         "Comprehensive care for skin, hair, and nail conditions, including medical and cosmetic treatments.",
     },
     {
-      image: "/assets/S2.png",
+      image: "/assets/Blur.png",
       title: "Cosmestology",
       description:
         "Advanced cosmetic procedures to enhance appearance, skin health, and overall beauty.",
     },
     {
-      image: "/assets/S3.png",
+      image: "/assets/Blur.png",
       title: "ENT Surgery",
       description:
         "Expert care for ear, nose, and throat disorders with both medical and surgical solutions.",
     },
     {
-      image: "/assets/S4.png",
+      image: "/assets/Blur.png",
       title: "Audiology",
       description:
         "Hearing evaluations and therapies to improve communication and auditory health.",
     },
     {
-      image: "/assets/S5.png",
+      image: "/assets/Blur.png",
       title: "Hearing AID",
       description:
         "Customized hearing aid fittings and solutions for better hearing and quality of life.",
     },
     {
-      image: "/assets/S6.png",
+      image: "/assets/Blur.png",
       title: "Ortho Surgery",
       description:
         "Expert care for bone, joint, and musculoskeletal conditions with modern treatment options.",
     },
 
     {
-      image: "/assets/S7.png",
+      image: "/assets/Blur.png",
       title: "Urology",
       description:
         "Specialized treatment for urinary tract and male reproductive health conditions.",
     },
     {
-      image: "/assets/S8.png",
+      image: "/assets/Blur.png",
       title: "Pediatrics & Nanetology",
       description:
         "Specialized healthcare services for infants, children, and adolescents.",
     },
     {
-      image: "/assets/S9.png",
+      image: "/assets/Blur.png",
       title: "General Surgery",
       description:
         "Surgical care for a wide range of conditions requiring operative treatment.",
     },
     {
-      image: "/assets/S10.png",
+      image: "/assets/Blur.png",
       title: "General Medicine",
       description:
         "Comprehensive primary care services for routine health maintenance and illness treatment.",
     },
     {
-      image: "/assets/S11.png",
+      image: "/assets/Blur.png",
       title: "General Health Checkup",
       description:
         "Comprehensive preventive health assessments for early detection of diseases.",
     },
     {
-      image: "/assets/S12.png",
+      image: "/assets/Blur.png",
       title: "Opthalmology",
       description:
         "Eye care services including vision correction, eye disease management, and surgeries.",
     },
 
     {
-      image: "/assets/S13.png",
+      image: "/assets/Blur.png",
       title: "Diabetology & Thyroid Specialist",
       description:
         "Focused care for diabetes, thyroid disorders, and related metabolic conditions.",
     },
     {
-      image: "/assets/S14.png",
+      image: "/assets/Blur.png",
       title: "Emergency Medicine Physician",
       description:
         "24/7 urgent medical care for accidents, trauma, and life-threatening conditions.",
     },
     {
-      image: "/assets/S15.png",
+      image: "/assets/Blur.png",
       title: "Pharmacy",
       description:
         "In-house pharmacy providing reliable access to prescribed medicines and health products.",
     },
     {
-      image: "/assets/S16.png",
+      image: "/assets/Blur.png",
       title: "Pathology",
       description:
         "Accurate laboratory testing and diagnostics for effective treatment planning.",
@@ -321,13 +321,13 @@ const ServicesSection = () => {
   ];
 
   const upcomingServices = [
-    { title: "Laser - Fractional CO2", logo: "/assets/Up1.jpg" },
-    { title: "NdYAG", logo: "/assets/Up2.jpg" },
-    { title: "Hair Removal Laser", logo: "/assets/Up3.jpg" },
-    { title: "Hollywood Spectra Peel", logo: "/assets/Up4.jpg" },
-    { title: "MNRF", logo: "/assets/Up5.jpg" },
-    { title: "Hydrafacial", logo: "/assets/Up6.jpg" },
-    { title: "HIFU", logo: "/assets/Up7.jpg" },
+    { title: "Laser - Fractional CO2", logo: "/assets/Blur.png" },
+    { title: "NdYAG", logo: "/assets/Blur.png" },
+    { title: "Hair Removal Laser", logo: "/assets/Blur.png" },
+    { title: "Hollywood Spectra Peel", logo: "/assets/Blur.png" },
+    { title: "MNRF", logo: "/assets/Blur.png" },
+    { title: "Hydrafacial", logo: "/assets/Blur.png" },
+    { title: "HIFU", logo: "/assets/Blur.png" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

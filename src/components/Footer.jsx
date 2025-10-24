@@ -80,7 +80,7 @@ const Footer = () => {
                 Giridih Road Bharkatta, Saranda, Jharkhand
               </p>
               <p>
-                <i className="fas fa-phone"></i> +91 9892772233
+                <i className="fas fa-phone"></i> +91 9821772233
               </p>
               <p>
                 <i className="fas fa-envelope"></i>{" "}

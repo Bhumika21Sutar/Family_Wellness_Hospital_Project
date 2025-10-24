@@ -14,8 +14,8 @@ const upload = multer({ storage: storage });
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "bhumikasutar21@gmail.com",
-    pass: "cypf rsbj iaza ijay",
+    user: "familywellnesshospital@gmail.com",
+    pass: "hsky czeu bfxr jgdl",
   },
 });
 
@@ -33,7 +33,7 @@ app.post("/send-contact", upload.array("attachments"), async (req, res) => {
     // Email details
     const mailOptions = {
       from: `"${name}" <${email}>`,
-      to: "bhumikasutar21@gmail.com", // where you want to receive
+      to: "familywellnesshospital@gmail.com", // where you want to receive
       subject: "New Contact Form Submission",
       text: `
         Name: ${name}
@@ -84,7 +84,7 @@ app.post(
 
       const mailOptions = {
         from: `"${name}" <${email}>`,
-        to: "bhumikasutar21@gmail.com",
+        to: "familywellnesshospital@gmail.com",
         subject: "New Team Application",
         text: `
           Name: ${name}

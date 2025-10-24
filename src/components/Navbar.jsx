@@ -34,17 +34,38 @@ const Navbar = () => {
   }, []);
 
   const formLinks = [
-    { name: "Registration Form", url: "/forms/Form1.pdf" },
-    { name: "Application Form", url: "/forms/Form2.pdf" },
-    { name: "Consent Form", url: "/forms/Form3.pdf" },
-    { name: "Registration Form", url: "/forms/Form4.pdf" },
-    { name: "Application Form", url: "/forms/Form5.pdf" },
-    { name: "Consent Form", url: "/forms/Form6.pdf" },
-    { name: "Registration Form", url: "/forms/Form7.pdf" },
-    { name: "Application Form", url: "/forms/Form8.pdf" },
-    { name: "Consent Form", url: "/forms/Form9.pdf" },
-    { name: "Registration Form", url: "/forms/Form10.pdf" },
-    { name: "Application Form", url: "/forms/Form11.pdf" },
+    {
+      name: "1. Activity Record Card",
+      url: "/forms/ACTIVITY RECORD CARD.pdf",
+    },
+    {
+      name: "2. Consultant/RMO Visit Record",
+      url: "/forms/CONSULTANT- RMO VISIT RECORD.pdf",
+    },
+    { name: "3. Discharge Summary", url: "/forms/DISCHARGE SUMMARY.pdf" },
+    { name: "4. Injury Form", url: "/forms/INJURY REPORT FORM.pdf" },
+    {
+      name: "5. Intake-Output Record",
+      url: "/forms/INTAKE - OUTPUT RECORD.pdf",
+    },
+    { name: "6. Vital Signs Record", url: "/forms/VITAL SIGNS RECORD.pdf" },
+    {
+      name: "7. Requilsition for Supply of Blood/Blood Components",
+      url: "/forms/REQULSITION FOR SUPPLY OF BLOOD-BLOOD COMPONENTS.pdf",
+    },
+    {
+      name: "8. Police Information",
+      url: "/forms/POLICE INFORMATION.pdf",
+    },
+    {
+      name: "9. Nursing Notes & Nursing Initial Assement Form",
+      url: "/forms/NURSING INITIAL ASSESSMENT FORM.pdf",
+    },
+    {
+      name: "10. Medicine Return Slip",
+      url: "/forms/MEDICINE RETURN SLIP.pdf",
+    },
+    { name: "11. OPD Case Summary", url: "/forms/OPD CASE SUMMARY.pdf" },
   ];
 
   return (

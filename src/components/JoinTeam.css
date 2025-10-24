@@ -146,6 +146,7 @@
 .form-row label {
   display: flex;
   flex-direction: column;
+  text-align: left;
   font-size: 14px;
   font-weight: 500;
   color: var(--text-dark);
