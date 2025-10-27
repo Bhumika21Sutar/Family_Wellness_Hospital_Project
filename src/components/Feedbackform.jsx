@@ -136,9 +136,9 @@
 // export default FeedbackForm;
 
 import React, { useState } from "react";
-import "./FeedbackForm.css";
+import "./Feedbackform.css";
 
-const FeedbackForm = () => {
+const Feedbackform = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -165,7 +165,7 @@ const FeedbackForm = () => {
     e.preventDefault();
 
     const data = new FormData();
-    data.append("access_key", "5c83e84b-605d-49ce-98c1-63da0be11b70"); // your Web3Forms key
+    data.append("access_key", "5c83e84b-605d-49ce-98c1-63da0be11b70");
     Object.entries(formData).forEach(([key, value]) => data.append(key, value));
 
     const response = await fetch("https://api.web3forms.com/submit", {
@@ -366,4 +366,4 @@ const FeedbackForm = () => {
   );
 };
 
-export default FeedbackForm;
+export default Feedbackform;
