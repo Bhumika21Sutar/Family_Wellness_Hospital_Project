@@ -10,6 +10,7 @@ import Contact from "./components/Contact";
 import MapLoc from "./components/Maploc";
 import Footer from "./components/Footer";
 import AreaOfFocus from "./components/AreaOfFocus";
+import Feedbackform from "./components/Feedbackform";
 import FooterFix from "./components/FooterFix";
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
       <TeamSection />
       <Contact />
       <MapLoc />
+      <Feedbackform />
       <Footer />
       <FooterFix />
     </div>
