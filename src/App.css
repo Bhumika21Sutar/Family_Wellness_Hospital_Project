@@ -1,0 +1,10 @@
+/* Global Variables */
+:root {
+  --primary-red: #d60000;
+  --soft-pink: #fff1f1;
+  --text-gray: #666666;
+  --text-dark: #333333;
+  --white: #ffffff;
+  --light-gray: #f8f9fa;
+  --border-gray: #e0e0e0;
+}
