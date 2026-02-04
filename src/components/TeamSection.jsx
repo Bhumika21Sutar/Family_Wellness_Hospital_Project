@@ -129,14 +129,14 @@ const TeamSection = () => {
   );
 
   return (
-    <motion.section
-      id="team"
-      className="team-section"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      viewport={{ once: true }}
-    >
+  <motion.section
+  id="team"
+  className="team-section"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 1 }}
+>
+
       <div className="team-container">
         <motion.h2
           className="section-title"

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Chatbot = () => {
   console.log("Chatbot component rendered");
-  const [isOpen, setIsOpen] = useState(true); // start open
+  const [isOpen, setIsOpen] = useState(false); // start open
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [isTyping, setIsTyping] = useState(false);
