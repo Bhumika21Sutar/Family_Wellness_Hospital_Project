@@ -62,7 +62,7 @@ const Contact = () => {
     });
 
     try {
-      const res = await fetch("http://localhost:5000/send-contact", {
+      const res = await fetch("https://family-wellness-hospital-project.onrender.com/send-contact", {
         method: "POST",
         body: formData, // ✅ multipart/form-data
       });

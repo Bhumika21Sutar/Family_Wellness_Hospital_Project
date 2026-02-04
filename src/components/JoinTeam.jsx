@@ -17,7 +17,7 @@ const JoinTeam = () => {
     const formData = new FormData(e.target); // ✅ collect all form fields + files
 
     try {
-      const res = await fetch("http://localhost:5000/send-application", {
+      const res = await fetch("https://family-wellness-hospital-project.onrender.com/send-application", {
         method: "POST",
         body: formData, // ✅ must send as multipart/form-data
       }).then((res) => res.json());
